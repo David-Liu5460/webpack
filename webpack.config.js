@@ -33,6 +33,11 @@ module.exports = {
     chunkFilename: "[name].chunk.js",
     // publicPath: "./",
   },
+  // 不会被打包 去cdn上面获取
+  externals: {
+    lodash: "_",
+    dayjs: "dayjs"
+  },
   // webpack插件打包优化
   optimization: {
     minimizer: [
